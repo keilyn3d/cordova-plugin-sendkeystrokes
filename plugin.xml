@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-sendkeystrokes" version="0.2.3">
+    <name>Device</name>
+    <description>Simulate keystrokes in cordova</description>
+    <license>MIT</license>
+    <keywords>cordova,keystrokes,simulate</keywords>
+    <js-module src="www/device.js" name="device">
+        <clobbers target="device" />
+    </js-module>
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Echo">
+                <param name="android-package" value="org.apache.cordova.plugin.SendKeystrokes"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/SendKeystrokes.java" target-dir="src/org/apache/cordova/plugin" />
+    </platform>
+</plugin>
