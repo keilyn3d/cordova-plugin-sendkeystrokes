@@ -31,7 +31,7 @@ public class SendKeystrokes extends CordovaPlugin {
   }
 
   private void sendKey(int type, int key, CallbackContext callbackContext) {
-          self.webView.dispatchKeyEvent(new KeyEvent(type, key));
+          this.webView.dispatchKeyEvent(new KeyEvent(type, key));
           callbackContext.success( type + key);
   }
 }
