@@ -1,0 +1,24 @@
+{
+  "name": "cordova-plugin-sendkeystrokes",
+  "version": "1.0.0-dev",
+  "description": "Simulate Kesytrokes in cordova",
+  "cordova": {
+    "id": "cordova-plugin-sendkeystrokes",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keilyn3d/cordova-plugin-sendkeystrokes"
+  },
+  "keywords": [
+    "cordova",
+    "device",
+    "ecosystem:cordova",
+    "cordova-android",
+    "keystrokes"
+  ],
+  "author": "Keilyn Nunez",
+  "license": "MIT"
+}
