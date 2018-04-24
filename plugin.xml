@@ -5,12 +5,12 @@
     <description>Simulate keystrokes in cordova</description>
     <license>MIT</license>
     <keywords>cordova,keystrokes,simulate</keywords>
-    <js-module src="www/device.js" name="device">
-        <clobbers target="device" />
+    <js-module src="www/sendKeystrokes.js" name="device">
+        <clobbers target="sendkeystrokes" />
     </js-module>
     <platform name="android">
         <config-file target="config.xml" parent="/*">
-            <feature name="Echo">
+            <feature name="SendKeystrokes">
                 <param name="android-package" value="org.apache.cordova.plugin.SendKeystrokes"/>
             </feature>
         </config-file>
