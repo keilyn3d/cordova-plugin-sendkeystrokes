@@ -10,8 +10,6 @@ import org.json.JSONObject;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
  
 
 /**
@@ -32,12 +30,14 @@ public class SendKeystrokes extends CordovaPlugin {
 
   private void sendKey(int type, int key, CallbackContext callbackContext) {
 //           this.webView.dispatchKeyEvent(new KeyEvent(type, key));
+	  
+    	try {
            cordova.getActivity().runOnUiThread(new Runnable() {
                 public void run() {
                     webView.dispatchKeyEvent(new KeyEvent(type, key));
                 }
 	        });
-
           callbackContext.success( type + key);
+	} catch(Exception e) {}
   }
 }
