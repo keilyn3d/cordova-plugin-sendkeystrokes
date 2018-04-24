@@ -23,11 +23,7 @@ public class SendKeystrokes extends CordovaPlugin {
       return false;
   }
 
-  private void echo(int type, int key, CallbackContext callbackContext) {
-      if (type != null && key != null) {
+  private void sendKey(int type, int key, CallbackContext callbackContext) {
           callbackContext.success( type + key);
-      } else {
-          callbackContext.error(-1);
-      }
   }
 }
